@@ -50,26 +50,26 @@ code {
 .container{
   background-color: brown;
   height: 650px;
-  width: 100%;
-  position: absolute;
 }
 .left-box{
 background-color: white;
 display: inline-block;
 height: 70%;
-width: 30%;
 /* position: relative; */
 border-radius: 5px;
 margin-top: 8%;
-margin-left: 18%;
+width:45%;
+margin-left: 10px;
 }
 .right-box{
-  display: inline-block;
+ display: inline-block;
   height: 70%;
-  width: 30%;
+  width:45%;
+ vertical-align: bottom;
   background-color: white;
  border-radius: 5px;
 margin-top: 8%;
-margin-left: 2%;
+
+margin-left: 60px;
 
 }

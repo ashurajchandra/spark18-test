@@ -1,6 +1,7 @@
 import React from 'react';
 import '../index.css';
 import Navbar from "./Navbar";
+import City from './city';
 
 class App extends React.Component {
   constructor(){
@@ -57,7 +58,7 @@ class App extends React.Component {
       <div>
         <Navbar/>
         <div className='container'>
-         <span><div className='left-box'>
+         <div className='left-box'>
            <h2> Portugal</h2>
             <div>
                <input type="checkbox" name="Aasiya jayavant" onChange={this.handleOnChange1}/>
@@ -74,7 +75,7 @@ class App extends React.Component {
               </div>
            <div>  
              <input type="checkbox"  name="Cayla Brister"  onChange={this.handleOnChange1}/>
-             <label for="task1">Cayla Brister </label>onChange={this.handleOnChange1}
+             <label for="task1">Cayla Brister </label>
              </div>
              <h2> Nicaragua</h2>
             <div>
@@ -103,8 +104,11 @@ class App extends React.Component {
              <input type="checkbox" name="Zelena Denisova" onChange={this.handleOnChange3}/>
              <label for="task1">Zelena Denisova</label>
              </div>
-          </div></span> 
-         <span>  <div className='right-box'></div></span> 
+          </div>
+          <div className='right-box'>
+           {Portugal.length==0 && Nicaragua.length==0 && Marshall.length==0?<h3>Nothing To Show </h3>: <City Portugal={Portugal} Nicaragua={Nicaragua} Marshall={Marshall} />}
+              
+           </div>
         </div>
 
 
