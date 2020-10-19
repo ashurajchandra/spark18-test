@@ -51,6 +51,21 @@ class App extends React.Component {
       this.setState({Marshall:newValue});
     }
   }
+  remove1=(name)=>{
+    const {Portugal}=this.state;
+    const newValue=Portugal.filter(item=>item!==name);
+    this.setState({Portugal:newValue});
+  }
+  remove2=(name)=>{
+    const {Nicaragua}=this.state;
+    const newValue=Nicaragua.filter(item=>item!==name);
+    this.setState({Nicaragua:newValue});
+  }
+  remove3=(name)=>{
+    const {Marshall}=this.state;
+    const newValue=Marshall.filter(item=>item!==name);
+    this.setState({Marshall:newValue});
+  }
   render() { 
     const {  Portugal,Nicaragua, Marshall}=this.state;
     console.log('sttae',Portugal,Nicaragua,Marshall);
@@ -106,7 +121,7 @@ class App extends React.Component {
              </div>
           </div>
           <div className='right-box'>
-           {Portugal.length==0 && Nicaragua.length==0 && Marshall.length==0?<h3>Nothing To Show </h3>: <City Portugal={Portugal} Nicaragua={Nicaragua} Marshall={Marshall} />}
+           {Portugal.length==0 && Nicaragua.length==0 && Marshall.length==0?<h3>Nothing To Show </h3>: <City Portugal={Portugal} Nicaragua={Nicaragua} Marshall={Marshall}  remove1={this.remove1} remove2={this.remove2} remove3={this.remove3} />}
               
            </div>
         </div>
