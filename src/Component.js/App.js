@@ -53,16 +53,26 @@ class App extends React.Component {
   }
   remove1=(name)=>{
     const {Portugal}=this.state;
+   let dom= document.getElementById(`${name}`);
+   console.log('dom',dom);
+   dom.checked=false;
+
     const newValue=Portugal.filter(item=>item!==name);
     this.setState({Portugal:newValue});
   }
   remove2=(name)=>{
     const {Nicaragua}=this.state;
+    let dom= document.getElementById(`${name}`);
+    console.log('dom',dom);
+    dom.checked=false;
     const newValue=Nicaragua.filter(item=>item!==name);
     this.setState({Nicaragua:newValue});
   }
   remove3=(name)=>{
     const {Marshall}=this.state;
+    let dom= document.getElementById(`${name}`);
+    console.log('dom',dom);
+    dom.checked=false;
     const newValue=Marshall.filter(item=>item!==name);
     this.setState({Marshall:newValue});
   }
@@ -76,47 +86,47 @@ class App extends React.Component {
          <div className='left-box'>
            <h2> Portugal</h2>
             <div>
-               <input type="checkbox" name="Aasiya jayavant" onChange={this.handleOnChange1}/>
+               <input type="checkbox" name="Aasiya jayavant" id="Aasiya jayavant" onChange={this.handleOnChange1}/>
                <label for="task1">Aasiya jayavant</label>
             </div>
            <div>
-             <input type="checkbox" name="Luvleen Laurence"  onChange={this.handleOnChange1}/>
+             <input type="checkbox" name="Luvleen Laurence" id="Luvleen Laurence"  onChange={this.handleOnChange1}/>
              <label for="task1">Luvleen Laurence</label>
              </div>
 
             <div>
-              <input type="checkbox" name="Rey Melbourney" onChange={this.handleOnChange1}/>
+              <input type="checkbox" name="Rey Melbourney" id="Rey Melbourney"  onChange={this.handleOnChange1}/>
               <label for="task1">Rey Melbourney</label>
               </div>
            <div>  
-             <input type="checkbox"  name="Cayla Brister"  onChange={this.handleOnChange1}/>
+             <input type="checkbox"  name="Cayla Brister"  id="Cayla Brister"  onChange={this.handleOnChange1}/>
              <label for="task1">Cayla Brister </label>
              </div>
              <h2> Nicaragua</h2>
             <div>
-               <input type="checkbox" name="Deevidas Nandi" onChange={this.handleOnChange2}/>
+               <input type="checkbox" name="Deevidas Nandi"  id="Deevidas Nandi" onChange={this.handleOnChange2}/>
                <label for="task1">Deevidas Nandi</label>
             </div>
            <div>
-             <input type="checkbox" name="Obasey Chidy" onChange={this.handleOnChange2}/>
+             <input type="checkbox" name="Obasey Chidy" id="Obasey Chidy"onChange={this.handleOnChange2}/>
              <label for="task1">Obasey Chidy</label>
              </div>
 
             <div>
-              <input type="checkbox" name="Xenie Dolezelova" onChange={this.handleOnChange2}/>
+              <input type="checkbox" name="Xenie Dolezelova" id="Xenie Dolezelova" onChange={this.handleOnChange2}/>
               <label for="task1">Xenie Dolezelova</label>
               </div>
            <div>  
-             <input type="checkbox" name="Eziequiel Dengra" onChange={this.handleOnChange2}/>
+             <input type="checkbox" name="Eziequiel Dengra" id="Eziequiel Dengra" onChange={this.handleOnChange2}/>
              <label for="task1">Eziequiel Dengra</label>
              </div>
              <h2> Marshall Island</h2>
             <div>
-               <input type="checkbox" name="Aaron Almaraz" onChange={this.handleOnChange3}/>
+               <input type="checkbox" name="Aaron Almaraz" id="Aaron Almaraz" onChange={this.handleOnChange3}/>
                <label for="task1">Aaron Almaraz</label>
             </div>
            <div>
-             <input type="checkbox" name="Zelena Denisova" onChange={this.handleOnChange3}/>
+             <input type="checkbox" name="Zelena Denisova" id="Zelena Denisova" onChange={this.handleOnChange3}/>
              <label for="task1">Zelena Denisova</label>
              </div>
           </div>
